@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+	--main-font: 'Montserrat', sans-serif;
+	--secondary-font: 'Fraunces', serif;
+	--dark-cyan-color:  hsl(158, 36%, 37%);
+	--cream-color: hsl(30, 38%, 92%);
+	--very-dark-blue-color: hsl(212, 21%, 14%);
+	--dark-grayish-blue-color: hsl(228, 12%, 48%);
+	--white-color: hsl(0, 0%, 100%);
+	--bold-font: 700;
+	--normal-font: 500;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+
+	background-color: var(--cream-color);
+	margin: 0;
+	font-family: var(--main-font);
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+
+	height: calc(100vh - 2rem);
+	max-width: 900px;
+	overflow: hidden;
+
+	background-color: var(--white-color);
+	border-radius: 10px;
+}
+
+.main-information {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	padding: 1.5rem;
+}
+
+.product-type {
+	font-size: 14px;
+	color: var(--dark-grayish-blue-color);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.product-name {
+	margin: 0;
+
+	font-family: var(--secondary-font);
+	font-size: 28px;
+	color: var(--very-dark-blue-color);
+}
+
+.product-description {
+	font-size: 14px;
+	color: var(--dark-grayish-blue-color);
+}
+
+.product-prices {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	color: var(--dark-grayish-blue-color);
+	font-size: 12px;
+}
+
+.product-prices p:nth-child(1) {
+	font-family: var(--secondary-font);
+	font-size: 28px;
+	color: var(--dark-cyan-color);
+}
+
+.product-prices p:nth-child(2) {
+	text-decoration: line-through;
+}
+
+.product-button {
+	padding: 1rem 0;
+	padding-left: 2rem;
+
+	background-image: url(./images/icon-cart.svg);
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+
+	font-family: var(--main-font);
+	font-weight: var(--bold-font);
+	color: var(--white-color);
+	
+	background-color: var(--dark-cyan-color);
+	border: none;
+	border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+	.main {
+		flex-direction: row;
+		height: 70%;
+	}
+
+	picture img {
+		width: 450px;
+	}
+}
